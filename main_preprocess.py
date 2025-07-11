@@ -173,9 +173,9 @@ def test_xgboost(path=1):
 if __name__ == "__main__":
 
 
-    # # PROCESSE1: ETL and EDA process for SET50 tickers
+    # PROCESSE1: ETL and EDA process for SET50 tickers
     # STEP1: Extract and save stock data for all SET50 tickers : 2001-12-06' to '2025-6-01'
-    # extract_save_ticker()    
+    extract_save_ticker()    
 
     
     # STEP2-5: Load the saved CSV files into DataFrames
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     plot_category('target', df)
 
     
-    key = {'likely_sell': 0, 'hold': 1, 'likely_buy': 2, 'buy': 3, 'sell': 4}
+    key_value = {'sell': 0, 'hold': 1, 'buy': 2}
     count = {1: 3531, 0: 1370, 2: 793} 
     
     
