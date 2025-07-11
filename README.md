@@ -78,7 +78,6 @@ TorchModel(
   (fc6): Linear(128 → 3)
 )
 ```
----
 
 ### 📊 Model Performance Metrics
 - For overall of model test: **Accuracy  0.85**
@@ -134,3 +133,4 @@ Model output (predicted signals):
 ```txt
 Model predictions: ['hold', 'sell', 'sell', 'buy', 'buy']
 ```
+---
