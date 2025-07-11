@@ -78,6 +78,7 @@ TorchModel(
   (fc6): Linear(128 → 3)
 )
 ```
+---
 
 ### 📊 Model Performance Metrics
 - For overall of model test: **Accuracy  0.85**
@@ -95,7 +96,7 @@ TorchModel(
     - Final Train Accuracy: 0.8408
     - Final Val Accuracy: 0.8361
 
-
+---
 ### 🔢 Confusion Matrix
 
 |       | Predicted 0 | Predicted 1 | Predicted 2 |
@@ -104,6 +105,7 @@ TorchModel(
 | True 1| 151         | 470         | 85          |
 | True 2| 4           | 33          | 670         |
 
+---
 
 ### 📈 Dataset Summary
 
@@ -122,3 +124,13 @@ TorchModel(
 | macd_diff       | bb_upper        | bb_lower        | bb_width        | adx             |
 | adx_pos         | adx_neg         | Daily_Return    | Close_Diff_t-1  | Year            |
 | Quarter         | Day             | Month           | Weekday         | target_encoded  |
+
+
+---
+### 🤖 Example Model Prediction
+
+Model output (predicted signals):
+
+```txt
+Model predictions: ['hold', 'sell', 'sell', 'buy', 'buy']
+```
