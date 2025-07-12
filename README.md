@@ -13,21 +13,14 @@ A complete machine learning pipeline for analyzing **PPT Thai SET50 stock market
 
 This project aims to classify `buy`, `hold`, and `sell` signals for **PTT stock** in SET50 stocks using historical data (2001-12-06 to 2025-6-01) and technical indicators.
 
-### 🧩 Problem Statement:
+### 🧩 Problem Statement
 For investors lacking prior knowledge or experience, making decisions about when to buy, sell, or hold PTT stock can be challenging. This project aims to provide actionable guidance by identifying optimal investment signals based on historical patterns and technical analysis.
 
-### 🔍 Approach:
+### 🔍 Approach
 
 A **Neural Network (MLP)** model was developed using **PyTorch**. Financial data is often complex and high-dimensional, making deep learning a suitable approach. The model incorporates a range of technical indicators as input features to enhance prediction accuracy.
 
-### 🎯 Results & Impact:*
-
-- **Model Accuracy:** Up to **85%**
-- **F1 Score:** Between **75% – 91%**
-
-With these performance metrics, the model offers a reliable tool to support investors in making informed decisions, reducing uncertainty, and improving investment confidence.
-
-### 🎢 Processes:
+### 🎢 Processes
 
 1. **ETL (Extract, Transform, Load)** – Download and clean SET50 historical stock data  
 2. **EDA** – Explore trends, distributions, outliers, , including example visualizations such as **MACD** and **Bollinger Bands (BB)** graphs  
@@ -37,6 +30,28 @@ With these performance metrics, the model offers a reliable tool to support inve
 6. **Resampling** – Balance classes using oversampling or undersampling techniques  
 7. **Model Training** – Train a classification model (e.g., PyTorch MLP)  
 8. **Prediction & Evaluation** – Assess signal prediction performance  
+
+### 🎯 Results & Impact
+
+- **Model Accuracy:** Up to **85%**
+- **F1 Score:** Between **75% – 91%**
+
+With these performance metrics, the model offers a reliable tool to support investors in making informed decisions, reducing uncertainty, and improving investment confidence.
+
+### ⚙️ Model Development Challenges:
+
+One of the most challenging aspects of this project was **hyperparameter tuning**. Selecting the right architecture and parameters significantly influenced model performance. Key decisions included:
+
+- **Number of Hidden Layers:** Tested 1 to 4 layers; deeper models risked overfitting without regularization.
+- **Hidden Dimensions:** Tuned hidden units (e.g., 64, 128, 256) to balance learning capacity vs. overfitting.
+- **Activation Functions:** Compared `ReLU`, `GElu`, and `Silu` for nonlinear transformations.
+- **Dropout Rate:** Experimented with dropout rates from 0.2 to 0.5 to avoid overfitting.
+- **Learning Rate & Optimizer:** Fine-tuned learning rates (e.g., 0.0005 to 0.001) and compared optimizers like `Adam` and `AdamW`.
+- **Batch Size & Epochs:** Balanced training time and convergence using different batch sizes (e.g., 16, 24) and epochs (50–100).
+- **Loss Function:** Used `CrossEntropyLoss` to handle multiclass classification.
+
+This extensive experimentation was necessary due to the noise and complexity of financial time series data.
+
 
 ## 📦 Library Usage
 
