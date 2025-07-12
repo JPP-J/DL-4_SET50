@@ -13,6 +13,22 @@ A complete machine learning pipeline for analyzing **PPT Thai SET50 stock market
 
 This project aims to classify `buy`, `hold`, and `sell` signals for **PTT stock** in SET50 stocks using historical data (2001-12-06 to 2025-6-01) and technical indicators.
 
+### 🧩 Problem Statement:
+For investors lacking prior knowledge or experience, making decisions about when to buy, sell, or hold PTT stock can be challenging. This project aims to provide actionable guidance by identifying optimal investment signals based on historical patterns and technical analysis.
+
+### 🔍 Approach:
+
+A **Neural Network (MLP)** model was developed using **PyTorch**. Financial data is often complex and high-dimensional, making deep learning a suitable approach. The model incorporates a range of technical indicators as input features to enhance prediction accuracy.
+
+### 🎯 Results & Impact:*
+
+- **Model Accuracy:** Up to **85%**
+- **F1 Score:** Between **75% – 91%**
+
+With these performance metrics, the model offers a reliable tool to support investors in making informed decisions, reducing uncertainty, and improving investment confidence.
+
+### 🎢 Processes:
+
 1. **ETL (Extract, Transform, Load)** – Download and clean SET50 historical stock data  
 2. **EDA** – Explore trends, distributions, outliers, , including example visualizations such as **MACD** and **Bollinger Bands (BB)** graphs  
 3. **Data Cleaning** – Remove missing values, detect and remove outliers, fix skewness in features  
